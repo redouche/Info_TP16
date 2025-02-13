@@ -1,6 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
+#include "exo3.h"
+#include "exo4.h"
+
 
 /* Notes
     calloc (4, sizeof(float)) - initie à 0 les 4 espaces alouéeds
@@ -12,58 +15,21 @@
 */
 
 int main() {
-    int choix, tailleChoisie;
-    int* tab = NULL;
-    printf("Quelle version souhaitez vous lancer (1-3) ?\n");
-    scanf("%d", &choix);
-    switch (choix) {
+    int choix_exo = 0;
+    printf("Quel exercice du TD16 souhaitez vous lancer ?\n");
+    printf("1 - Exercice 3\n");
+    printf("2 - Exercice 4\n");
+    printf("Votre choix :");
+    scanf("%d", &choix_exo);
+    switch (choix_exo) {
         case 1:
-            printf("Choissisez la taille de votre tableau :\n");
-            scanf("%d", &tailleChoisie);
-            tab = allouerTableauEntiersV1(tailleChoisie);
-            afficherTableau(tab, tailleChoisie);
-            free(tab);
+            printf("EXERCICE 3:\n");
+            exo3();
             break;
         case 2:
-            printf("Choissisez la taille de votre tableau :\n");
-            scanf("%d", &tailleChoisie);
-            allouerTableauEntiersV2(&tab, tailleChoisie);
-            afficherTableau(tab, tailleChoisie);
-            free(tab);
-            break;
-        case 3:
-            allouerTableauEntiersV3(&tab,&tailleChoisie);
-            afficherTableau(tab, tailleChoisie);
-            free(tab);
-            break;
+            printf("EXERCICE 4:\n");
+            exo4();
         default:
-            printf("Mauvais choix.");
             break;
     }
-    return 0;
-}
-
-void afficherTableau(int* tab, int const taille) {
-    printf("Tableau de taille : %d.\n", taille);
-    printf("Contenu du tableau :\n");
-    if(tab != NULL);
-    for(int i = 0; i < taille; i++) {
-        printf("%d ", tab[i]);
-    }
-    printf("\n");
-}
-
-int* allouerTableauEntiersV1(int const taille) {
-    int *p = calloc(taille, sizeof(int));
-    return p;
-}
-
-void allouerTableauEntiersV2(int** pTab, int const taille) {
-    *pTab = (int*)calloc(taille, sizeof(int)); // Rappel 1
-}
-
-void allouerTableauEntiersV3(int** pTab, int* taille) {
-    printf("Choissisez la taille de votre tableau :\n");
-    scanf("%d", taille);
-    *pTab = (int*)calloc(*taille, sizeof(int));
 }
