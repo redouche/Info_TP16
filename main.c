@@ -3,6 +3,7 @@
 #include "main.h"
 #include "exo3.h"
 #include "exo4.h"
+#include "exo5.h"
 
 
 /* Notes
@@ -19,7 +20,8 @@ int main() {
     printf("Quel exercice du TD16 souhaitez vous lancer ?\n");
     printf("1 - Exercice 3\n");
     printf("2 - Exercice 4\n");
-    printf("Votre choix :");
+    printf("3 - Exercice 5\n");
+    printf("Votre choix :\n");
     scanf("%d", &choix_exo);
     switch (choix_exo) {
         case 1:
@@ -29,6 +31,9 @@ int main() {
         case 2:
             printf("EXERCICE 4:\n");
             exo4();
+        case 3:
+            printf("EXERCICE 5:\n");
+            exo5();
         default:
             break;
     }
