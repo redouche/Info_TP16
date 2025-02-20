@@ -4,6 +4,7 @@
 #include "exo3.h"
 #include "exo4.h"
 #include "exo5.h"
+#include "exo8.h"
 
 
 /* Notes
@@ -21,6 +22,7 @@ int main() {
     printf("1 - Exercice 3\n");
     printf("2 - Exercice 4\n");
     printf("3 - Exercice 5\n");
+    printf("4 - Exercice 8\n");
     printf("Votre choix :\n");
     scanf("%d", &choix_exo);
     switch (choix_exo) {
@@ -31,9 +33,13 @@ int main() {
         case 2:
             printf("EXERCICE 4:\n");
             exo4();
+            break;
         case 3:
             printf("EXERCICE 5:\n");
             exo5();
+            break;
+        case 4:
+            printf("EXERCICE 8:\n PAS ENCORE FAIT...");
         default:
             break;
     }
