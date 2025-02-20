@@ -39,7 +39,9 @@ int main() {
             exo5();
             break;
         case 4:
-            printf("EXERCICE 8:\n PAS ENCORE FAIT...");
+            printf("EXERCICE 8:\n");
+            exo8();
+            break;
         default:
             break;
     }

@@ -1,7 +1,7 @@
 #ifndef EXO3_H
 #define EXO3_H
 
-void exo3(void);
+void exo3();
 void afficherTableau(int* tab, int const taille);
 int* allouerTableauEntiersV1(int const taille); // Fonction la plus facile, mais consomme plus
 void allouerTableauEntiersV2(int** pTab, int const taille); // Meilleure fonction, mais plus compliquée
